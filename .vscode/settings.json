@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ttml": "xml",
+        "*.ttss": "css"
+    },
+    "cmake.sourceDirectory": "C:/Users/HP/Downloads/talkout_app/windows"
+}
