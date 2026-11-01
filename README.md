@@ -84,10 +84,39 @@ flutter analyze
 ## Structure du projet
 
 ```text
-lib/                 Application Flutter
-  models/            État et données de l'application
-  screens/           Écrans de connexion, discussion, appels et profil
-  widgets/           Composants d'interface réutilisables
-backend/             API Node.js, serveur Socket.IO et base SQLite
-test/                Tests Flutter
+.
+├── android/                     Configuration et code natif Android
+├── backend/                     Serveur Node.js et base SQLite
+│   ├── db.js                     Accès à la base de données
+│   ├── package.json              Dépendances et scripts npm
+│   ├── package-lock.json         Verrouillage des dépendances npm
+│   └── server.js                 API REST et événements Socket.IO
+├── lib/                          Application Flutter
+│   ├── main.dart                 Point d'entrée
+│   ├── utils.dart                Utilitaires
+│   ├── models/
+│   │   └── chat.dart             Modèle de conversation
+│   ├── screens/
+│   │   ├── auth_screen.dart
+│   │   ├── call_screen.dart
+│   │   ├── calls_people.dart
+│   │   ├── chat_screen.dart
+│   │   ├── home_screen.dart
+│   │   ├── media_screen.dart
+│   │   ├── new_chat_screen.dart
+│   │   ├── profile_screen.dart
+│   │   └── splash_screen.dart
+│   ├── theme/
+│   │   └── colors.dart
+│   └── widgets/
+│       ├── attachments.dart
+│       └── common.dart
+├── test/
+│   └── widget_test.dart          Tests Flutter
+├── web/                          Fichiers de la plateforme Web
+├── windows/                      Fichiers de la plateforme Windows
+├── analysis_options.yaml         Règles d'analyse Dart
+├── pubspec.yaml                  Dépendances et configuration Flutter
+├── pubspec.lock                  Versions résolues des dépendances Flutter
+└── README.md
 ```
